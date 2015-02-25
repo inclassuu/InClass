@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#333333"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip"
+            android:background="#F8F8FF"
+            android:padding="3dip" >
+
+            <ImageView
+                android:id="@+id/individual_user_photo"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aap" >
+            </ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/individual_user_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thumbnail"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toLeftOf="@+id/individual_erase"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:gravity="center"
+            android:paddingLeft="15dip"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:textColor="#ffffff"
+            android:text="sizeme"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:typeface="sans" >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/individual_erase"
+            android:layout_width="60dip"
+            android:layout_height="35dip"
+            android:state_pressed="true" 
+            android:drawable="@drawable/delete_chat_clicked"
+            android:layout_alignBottom="@+id/individual_user_context"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/individual_user_context"
+            android:background="@drawable/delete_chat_unclick"
+            android:gravity="right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

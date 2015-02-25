@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/noUSE"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/chatting_back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#7e7e7e"
+            android:text="Back" />
+
+        <TextView
+            android:id="@+id/who_talking_with"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="test"
+            android:textColor="#ad0812" >
+
+        </TextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#909090"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7e7e7e"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/chat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:width="280dip" />
+
+        <ImageButton
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#333333"
+            android:onClick="mSendClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/send_button" >
+        </ImageButton>
+    </LinearLayout>
+
+</LinearLayout>
